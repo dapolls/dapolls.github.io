@@ -20,14 +20,18 @@ function init(){
     len = musicarr.length;
     
     run(musicarr[current], audio[0]);
-    
-    audio[0].addEventListener('ended',function(e){
+}
+$(document).keypress(handle_change_track);
+
+function handle_change_track(e){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+      if(keycode == '32' || keycode == '0' ){
         current++;
         if(current == len){
             current = 0;
         }
         run(musicarr[current],audio[0]);
-    });
+      }
 }
 
 function run(link, player){
