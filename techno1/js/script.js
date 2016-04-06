@@ -9,6 +9,8 @@ var musicarr = ["techno.mp3",
                 "techno3.mp3",
                 "techno4.mp3",
                 "techno5.mp3",
+                "techno6.mp3",
+                "techno7.mp3",
                ];
 shuffle(musicarr);
 
